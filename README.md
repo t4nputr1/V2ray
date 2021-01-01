@@ -15,7 +15,7 @@
 ### Installation/Update (h2 and ws versions have been merged)
 Vmess+websocket+TLS+Nginx+Website
 ```
-wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install .sh
+wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/xiihaiqal/V2ray/master/install.sh" && chmod +x install.sh && bash install.sh
 ```
 
 ### Precautions
