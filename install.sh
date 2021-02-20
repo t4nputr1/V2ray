@@ -236,8 +236,8 @@ port_alterid_set() {
     if [[ "on" != "$old_config_status" ]]; then
         read -rp "Please enter the connection port（default:443）:" port
         [[ -z ${port} ]] && port="443"
-        read -rp "Please enter alterID (default: 2 only allows numbers）:" alterID
-        [[ -z ${alterID} ]] && alterID="2"
+        read -rp "Please enter alterID (default: 10 only allows numbers）:" alterID
+        [[ -z ${alterID} ]] && alterID="10"
     fi
 }
 modify_path() {
@@ -422,7 +422,7 @@ ssl_install() {
     judge "Install the SSL certificate generation script"
 }
 domain_check() {
-    read -rp "Please enter your domain information(eg:kingkongvpn.xyz):" domain
+    read -rp "Please enter your domain information(eg:sshinjetor.net):" domain
     domain_ip=$(ping "${domain}" -c 1 | sed '1{s/[^(]*(//;s/).*//;q}')
     echo -e "${OK} ${GreenBG} Obtaining public network ip information, please be patient ${Font}"
     local_ip=$(curl https://api-ipv4.ip.sb/ip)
@@ -633,7 +633,7 @@ vmess_qr_config_tls_ws() {
     cat >$v2ray_qr_config_file <<-EOF
 {
   "v": "2",
-  "ps": "wulabing_${domain}",
+  "ps": "mfauzan_${domain}",
   "add": "${domain}",
   "port": "${port}",
   "id": "${UUID}",
@@ -651,7 +651,7 @@ vmess_qr_config_h2() {
     cat >$v2ray_qr_config_file <<-EOF
 {
   "v": "2",
-  "ps": "wulabing_${domain}",
+  "ps": "mfauzan_${domain}",
   "add": "${domain}",
   "port": "${port}",
   "id": "${UUID}",
